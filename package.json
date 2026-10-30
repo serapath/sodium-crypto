@@ -1,41 +1,28 @@
 {
-  "name": "sodium-universal",
+  "name": "sodium-crypto",
   "version": "5.0.1",
-  "description": "Universal wrapper for sodium-javascript and sodium-native working in Node.js and the Browser",
+  "description": "Universal wrapper for sodium-js and sodium-native working in Node.js and the Browser",
   "main": "index.js",
   "dependencies": {
-    "sodium-native": "^5.0.1"
-  },
-  "peerDependencies": {
-    "sodium-javascript": "~0.8.0"
-  },
-  "peerDependenciesMeta": {
-    "sodium-javascript": {
-      "optional": true
-    }
+    "sodium-native": "^5.0.1",
+    "sodium-js": "github:serapath/sodium-js"
   },
   "scripts": {
     "format": "prettier --write .",
-    "lint": "prettier --check . && lunte",
-    "prepublish": "./build-scripts/generate.js"
+    "lint": "prettier --check . && lunte"
   },
   "browser": {
-    "sodium-native": "sodium-javascript"
-  },
-  "browserify": {
-    "transform": [
-      "./build-scripts/transform.js"
-    ]
+    "sodium-native": "sodium-js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holepunchto/sodium-universal.git"
+    "url": "git+https://github.com/serapath/sodium-crypto.git"
   },
   "keywords": [
     "libsodium",
     "sodium",
     "sodium-native",
-    "sodium-javascript",
+    "sodium-js",
     "browserify"
   ],
   "contributors": [
@@ -45,9 +32,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/holepunchto/sodium-universal/issues"
+    "url": "https://github.com/serapath/sodium-crypto/issues"
   },
-  "homepage": "https://github.com/holepunchto/sodium-universal#readme",
+  "homepage": "https://github.com/serapath/sodium-crypto#readme",
   "devDependencies": {
     "lunte": "^1.0.0",
     "prettier": "^3.6.2",
